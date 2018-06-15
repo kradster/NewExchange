@@ -93,31 +93,25 @@
         ul.myappmenu{
             display:block;
             padding:5px;
-            border-radius:50px;
+            border-radius:0px;
             overflow: hidden;
         }
         
         ul.myappmenu li{
-            transform:scale(0.8);
-            border-radius:30px;
             padding:0px;
-            box-shadow:0px 0px 0px 10px rgba(0, 0, 0, .0);
+            border-bottom:2px solid transparent;
             transition:all .3s ease-in-out;
-            font-family:buc-bold;
         }
         
         ul.myappmenu li:hover{
-            background-color:rgba(0, 0, 0, .3);
-            box-shadow:none;
-            box-shadow:0px 0px 0px 3px rgba(0, 0, 0, 0.4);
+            border-bottom:2px solid #fff;
         }
        
         ul.myappmenu li.active{
-            background-color:rgba(0, 0, 0, .4);
+            border-bottom:2px solid #fff;
         }
         
         nav ul a{
-            font-family:buc-bold;
         }
         nav ul a:hover{
             background: transparent;
@@ -162,6 +156,8 @@
 
 <body class="white">
 
+                    
+
     
 
 
@@ -171,39 +167,37 @@
     <div class="navbar-fixed">
         <nav class="nav-extended z-depth-0" style="background:-webkit-linear-gradient(180deg, rgb(46, 49, 146) 0%, rgb(41, 171, 226) 100%);"> 
             <div class="nav-wrapper" id="mywalletnav">
-                <a href="index.html" class="brand-logo center" style="padding-left:50px;">BuyUCoin
-                    <span id="total-balance" class="hide">
-                    <small style="font-size:.4em;">TOTAL BALANCE</small>
-                    <b style="font-size:1em;">34,67800/-</b>
-                    </span>
+                <a href="index.html" class="brand-logo" style="padding-left:50px;"><b>BuyUCoin</b>
+                    
                 </a>
                 <a href="#" data-activates="slide-out" class="button-collapse hide show-on-small">
                     <i class="material-icons">menu</i>
                 </a>
-                <br>
-                <ul class="center hide-on-med-and-down myappmenu">
+                <ul class="hide-on-med-and-down myappmenu right">
                     <li class="active">
-                        <a href="">
-                            <i class="material-icons left">account_balance_wallet</i>Wallet</a>
+                        <a href="">Technology</a>
                     </li>
                     <li>
-                        <a id="tradelink">
-                            <i class="material-icons left">shopping_cart</i>Trade</a>
+                         <a class="dropdown-trigger" data-beloworigin="true" href='#' data-activates='dropdown1'>Products <i class="fas fa-sort-down"></i></a>
+                        <ul id='dropdown1' class='dropdown-content'>
+                                <li><a href="#!">one</a></li>
+                                <li><a href="#!">two</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#!">three</a></li>
+                                <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+                                <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+                        </ul>
                     </li>
                     <li>
-                        <a href="rates.html">
-                            <i class="material-icons left">assessment</i>Rates</a>
+                        <a href="rates.html">Company</a>
                     </li>
                     <li>
-                        <a href="">
-                            <i class="material-icons left">transfer_within_a_station</i>LogOut</a>
+                        <a href="">Resources</a>
+                    </li>
+                    <li>
+                        <a href="" class="red-text"><b>Request Demo</b></a>
                     </li>
                 </ul>
-            </div>
-            <div class="nav-content">
-                <span class="nav-title" style="padding-left:30px;font-size:12px;">TOTAL BALANCE <br>
-                   <b style="font-size:2em;">34,67800/-</b>
-                </span>
             </div>
         </nav>
     </div>
@@ -212,10 +206,10 @@
     <ul id="slide-out" class="sidenav" style="width:250px;border-radius:0px;padding:0px;">
         <li>
             <div class="user-view">
-                <div class="background" style="background-image:url('images/patter.png');background-size:cover;background-position: 0px -90px; background-repeat: no-repeat;">
+                <div class="background" style="background-image:url('img/skyline.jpg');background-size:cover;background-position: 0px -90px; background-repeat: no-repeat;">
                 </div>
                 <a href="#!user">
-                    <img class="circle" src="images/avatar.png">
+                    <img class="circle" src="">
                 </a>
                 <a href="#!name">
                     <span class="white-text name">John Doe</span>
@@ -278,8 +272,49 @@
     </ul>
 
     <!--SIDEBAR-END-->
+    <div id="anim-row" class="col s12" style="height:15px;"></div>
 
-    <div class="row center-align" style="margin-top:200px;">
+
+    <div class="row">
+        <div class="carousel carousel-slider center" style="background-image:url('../img/skyline.jpg');background-size:cover;background-attachment: fixed;" data-indicators="true">
+        <div class="carousel-item  white-text" href="#one!">
+            <div class="container">
+                <h2 class="left-align" style="padding:10px;background:rgba(255,255,255,0.2);"><b>ALPHAPOINT UTILIZES INTEL SECURITY TECHNOLOGY TO DELIVER ENTERPRISE-READY BLOCKCHAIN PLATFORM - AlphaPoint and Intel® Announce New TrustedVM™ Blockchain Product</b></h2> 
+                <p class="left-align">- TrustedVM™ - A trusted virtual machine enabled by Intel® Software Guard Extensions (Intel® SGX) technology</p> 
+                <p class="left-align"> - Read the full story at CoinDesk</p>
+            </div> 
+        </div>
+        <div class="carousel-item  white-text" href="#two!">
+            <div class="container">
+                
+                <h2 class="left-align" style="padding:10px;background:rgba(255,255,255,0.2);"><b>CME ANNOUNCES ALPHAPOINT AS TECHNOLOGY PROVIDER FOR GOLD TRADING INITIATIVE - CME partners with AlphaPoint to develop Royal Mint Gold (RMG) trading platform </b></h2>
+                <p class="left-align">- RMG blockchain and trading platform in live testing with major financial institutions</p> 
+                <p class="left-align">- Read the full story at CME OpenMarkets</p>
+            </div> 
+        </div>
+        <div class="carousel-item  white-text" href="#three!">
+            <div class="container">
+    
+                <h2 class="left-align" style="padding:10px;background:rgba(255,255,255,0.2);"><b>ALPHAPOINT AWARDED BEST INFRASTRUCTURE PROVIDER BY WATERSTECHNOLOGY</b></h2> 
+                <p class="left-align">- AlphaPoint Wins 2017 Sell-Side Technology Award for Best Infrastructure Provider</p> 
+                <p class="left-align">- Read the full press release at MarketWatch </p>
+            </div> 
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="row container">
+        <center>
+            <div class="col s12">
+                    Contact us to learn more today: <a href="" class="ui button blue darken-5">Request Demo</a>
+            </div>
+        </center>
+    </div>
+
+
+
+    <div class="row center-align" style="margin-top:50px;">
         <h3>Start your Bitcoin Exchange with our Software</h3>
         <p style="padding:20px;">Setup your white label bitcoin exchange right away. Or create your own cryptocurrency using draglet’s world-renowned software. Since 2013, we have been providing exchanges with optimal software solutions on a global scale. Numerous established bitcoin, cryptocurrency and commodity exchanges trust and use our software to run their business.</p>
     </div>
@@ -401,10 +436,66 @@
                 </div>
         </div>
         <div class="col s12" style="height:50px;"></div>    
-        <h4 class="center-align col s12">What are the Core Benefits?</h4>
         <br>
         <br>
     </div>
+    
+    <footer class="page-footer row white black-text">
+            <div class="col s10 offset-s1 grey lighten-4">
+              <div class="row">
+                <div class="col s4">
+                    <center>
+                        <br><br><br>
+                    <img style="width:150px" src="https://alphapoint.com/assets/img/ap-logo-trans-black.png" alt="">
+                    </center>
+                </div>
+                <div class="col s8">
+                    <div class="col s3">
+                        <h6><b>Products</b></h6>
+                        <br>
+                        Technology
+                        Asset Digitization
+                        Exchange Solutions
+                        Exchange Remarketer
+                    </div>
+                    <div class="col s3">
+                        <h6><b> Company</b></h6>
+                        <br>
+                        About Us
+                        Leadership 
+                        Careers
+                        Contact Us
+                        News
+                    </div>
+                    <div class="col s3">
+                        <h6><b>Resources</b></h6>
+                        <br>
+                        Intro to DLT
+                        Exchange Launch Guide
+                        Industry Reports
+                        Company Updates
+                        API
+                        Brand Kit
+                        AlphaPoint Public Network
+                        Privacy Policy
+                        Terms of Use
+                        Cookie Policy
+                    </div>
+                    <div class="col s3">
+                        <h6><b>Contact</b></h6>
+                        <br>
+                        Email | sales@alphapoint.com
+                        press@alphapoint.com 
+                        jobs@alphapoint.com
+                        Phone|+1.212.256.1231
+                    </div>
+
+
+                    
+                </div>
+              </div>
+            </div>
+    </footer>
    
 
     
@@ -426,6 +517,19 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>    
     <script type="text/javascript" src="js/navbar.js"></script>
+    <script>
+        $(document).ready(function(){
+
+        $('.carousel.carousel-slider').carousel({fullWidth: true});
+
+        setInterval(()=>{
+            $('.carousel').carousel('next');
+        },5000);
+
+        $('.dropdown-trigger').dropdown();
+        
+});
+    </script>
    
 </body>
 
