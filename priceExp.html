@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.1.0/font-awesome-animation.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/components/button.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/components/message.css">
@@ -33,11 +32,9 @@
         }
 
         a,
-        p,
-        .button {
+        p,.button {
             font-family: buc;
         }
-
         .myfont {
             font-family: buc;
         }
@@ -90,148 +87,121 @@
         .indicator {
             height: 5px;
         }
-
-        .circular {
-            margin-left: 20px !important;
+        .circular{
+            margin-left:20px  !important;
         }
-
-        ul.myappmenu {
-            display: block;
-            padding: 5px;
-            border-radius: 50px;
+        ul.myappmenu{
+            display:block;
+            padding:5px;
+            border-radius:0px;
             overflow: hidden;
         }
-
-        ul.myappmenu li {
-            transform: scale(0.8);
-            border-radius: 30px;
-            padding: 0px;
-            box-shadow: 0px 0px 0px 10px rgba(0, 0, 0, .0);
-            transition: all .3s ease-in-out;
-            font-family: buc-bold;
+        
+        ul.myappmenu li{
+            padding:0px;
+            border-bottom:2px solid transparent;
+            transition:all .3s ease-in-out;
         }
-
-        ul.myappmenu li:hover {
-            background-color: rgba(0, 0, 0, .3);
-            box-shadow: none;
-            box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.4);
+        
+        ul.myappmenu li:hover{
+            border-bottom:2px solid #fff;
         }
-
-        ul.myappmenu li.active {
-            background-color: rgba(0, 0, 0, .4);
+       
+        ul.myappmenu li.active{
+            border-bottom:2px solid #fff;
         }
-
-        nav ul a {
-            font-family: buc-bold;
+        
+        nav ul a{
         }
-
-        nav ul a:hover {
+        nav ul a:hover{
             background: transparent;
         }
-
-        button.button-tab {
-            background: -webkit-linear-gradient(180deg, rgb(46, 49, 146) 0%, rgb(41, 171, 226) 100%);
-            border-radius: 20px;
+        button.button-tab{
+            background:-webkit-linear-gradient(180deg, rgb(46, 49, 146) 0%, rgb(41, 171, 226) 100%);border-radius:20px;
         }
-
-        .ref-anim {
+        .ref-anim{
             animation: ref-anim .5s ease-in-out 1 normal;
         }
-
         @keyframes ref-anim {
-            from {
-                transform: scale(0);
-                opacity: 0;
+            from{
+                transform:scale(0);
+                opacity:0;
             }
-            to {
-                transform: scale(1);
-                opacity: 1;
+            to{
+                transform:scale(1);
+                opacity:1;
             }
         }
-
-        .myscroll-bar::-webkit-scrollbar {
-            width: 10px;
-            margin-right: 20px;
+        .myscroll-bar::-webkit-scrollbar{
+            width:10px;
+            margin-right:20px;
         }
-
-        .myscroll-bar::-webkit-scrollbar-thumb {
-            background-color: #fff;
-            border-radius: 10px;
+        .myscroll-bar::-webkit-scrollbar-thumb{
+            background-color:#fff;
+            border-radius:10px;
 
         }
-
-        ul.side-nav li.active {
-            border-radius: 50px;
+        ul.side-nav li.active{
+            border-radius:50px;
         }
-
-        ul.side-nav li.active a {
+        ul.side-nav li.active a{
+            color:#0d47a1;
+        }
+        ul.side-nav li.active a > i{
             color: #0d47a1;
         }
-
-        ul.side-nav li.active a>i {
-            color: #0d47a1;
-        }
-
-        table tbody tr > td:nth-child(even){
-            background-color:#eee;
-        }
+        
     </style>
 </head>
 
-<body class="white" ng-app="app">
+<body class="white">
+
+                    
+
+    
+
+
+   
 
     <!--NAVIGATION BAR-->
     <div class="navbar-fixed">
-        <nav class="nav-extended z-depth-0" style="background:-webkit-linear-gradient(180deg, rgb(46, 49, 146) 0%, rgb(41, 171, 226) 100%);">
+        <nav class="nav-extended z-depth-0" style="background:-webkit-linear-gradient(180deg, rgb(46, 49, 146) 0%, rgb(41, 171, 226) 100%);"> 
             <div class="nav-wrapper" id="mywalletnav">
-                <a href="index.html" class="brand-logo center" style="padding-left:50px;">BuyUCoin
-                    <span id="total-balance" class="hide">
-                        <small style="font-size:.4em;">TOTAL BALANCE</small>
-                        <b style="font-size:1em;">34,67800/-</b>
-                    </span>
+                <a href="index.html" class="brand-logo" style="padding-left:50px;"><b>BuyUCoin</b>
+                    
                 </a>
                 <a href="#" data-activates="slide-out" class="button-collapse hide show-on-small">
                     <i class="material-icons">menu</i>
                 </a>
-                <div style="height:50px;" id="br"></div>
-                <ul class="center hide-on-med-and-down myappmenu">
+                <ul class="hide-on-med-and-down myappmenu right">
                     <li class="active">
-                        <a href="">
-                            <i class="material-icons left">account_balance_wallet</i>Wallet</a>
+                        <a href="tech.html">Technology</a>
                     </li>
                     <li>
-                        <a id="tradelink">
-                            <i class="material-icons left">shopping_cart</i>Trade</a>
+                         <a href='product.html'>Products</a>
                     </li>
                     <li>
-                        <a href="rates.html">
-                            <i class="material-icons left">assessment</i>Rates</a>
+                        <a href="priceExp.html">Company</a>
                     </li>
                     <li>
-                        <a href="">
-                            <i class="material-icons left">transfer_within_a_station</i>LogOut</a>
+                        <a href="">Resources</a>
+                    </li>
+                    <li>
+                        <a href="request.html" class="red-text"><b>Request Demo</b></a>
                     </li>
                 </ul>
             </div>
-            <div class="nav-content">
-                <span class="nav-title" style="padding-left:30px;font-size:12px;">TOTAL BALANCE
-                    <br>
-                    <b style="font-size:2em;">34,67800/-</b>
-                </span>
-            </div>
         </nav>
     </div>
-
-    
     <!--SIDEBAR-->
 
     <ul id="slide-out" class="sidenav" style="width:250px;border-radius:0px;padding:0px;">
         <li>
             <div class="user-view">
-                <div class="background" style="background-image:url('images/patter.png');background-size:cover;background-position: 0px -90px; background-repeat: no-repeat;">
+                <div class="background" style="background-image:url('img/skyline.jpg');background-size:cover;background-position: 0px -90px; background-repeat: no-repeat;">
                 </div>
                 <a href="#!user">
-                    <img class="circle" src="images/avatar.png">
+                    <img class="circle" src="">
                 </a>
                 <a href="#!name">
                     <span class="white-text name">John Doe</span>
@@ -247,29 +217,19 @@
         </li>
         <li class="no-padding">
             <ul class="collapsible collapsible-accordion">
-                <li>
-                    <a class="collapsible-header">Dropdown
-                        <i class="material-icons">arrow_drop_down</i>
-                    </a>
-                    <div class="collapsible-body">
-                        <ul>
-                            <li>
-                                <a href="#!">First</a>
-                            </li>
-                            <li>
-                                <a href="#!">Second</a>
-                            </li>
-                            <li>
-                                <a href="#!">Third</a>
-                            </li>
-                            <li>
-                                <a href="#!">Fourth</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
+              <li>
+                <a class="collapsible-header">Dropdown<i class="material-icons">arrow_drop_down</i></a>
+                <div class="collapsible-body">
+                  <ul>
+                    <li><a href="#!">First</a></li>
+                    <li><a href="#!">Second</a></li>
+                    <li><a href="#!">Third</a></li>
+                    <li><a href="#!">Fourth</a></li>
+                  </ul>
+                </div>
+              </li>
             </ul>
-        </li>
+          </li>
         <li>
             <a href="new_orderbook.html">
                 <i class="material-icons left">monetization_on</i>Dentacoin</a>
@@ -297,175 +257,139 @@
         <li>
             <a href="">
                 <i class="material-icons left">transfer_within_a_station</i>LogOut</a>
-            </li>
+        </li>
+
 
 
     </ul>
 
     <!--SIDEBAR-END-->
-    <div id="anim-row" class="col s12" style="height:150px;"></div>
-    <div class="row center-align grey lighten-4" style="margin-top:-21px;">
-        <br>
-        <h3 class="blue-text ">Pricing</h3>
-        <p class="grey-text" style="padding:20px;"><b>Choose between 3 license types: Starter, Enterprise, Ultimate, either as Self-hosted or Cloud</b></p>
+    <div id="anim-row" class="col s12" style="height:15px;"></div>
+
+
+    <div class="row">
+        <div class="carousel carousel-slider center" style="height:100%;background-image:url('img/skyline.jpg');background-size:cover;background-attachment: fixed;" data-indicators="true">
+        <div class=" white-text" href="#one!">
+            <div class="container">
+                <br><br><br>
+                <h3 style="padding:10px;background:rgba(255,255,255,0.2);"><b>Start your crypto exchange today</b></h3> 
+                <h5>with this</h5> 
+                <div class="col s4 offset-s4 card black-text z-depth-5" style="border-radius:20px">
+                    <h1><b><span style="font-weight:100;"><small>$</small></span>99</b></h1>
+                    <h4>lorem</h4>
+                    <div class="grey-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, quisquam atque.</div>
+                    <br>
+                    <a href="" class="col s10 offset-s1 ui button pink" style="font-weight:100;border-radius:50px;">PURCHASE</a>
+                    <div class="col s12">
+                        <br>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        
+        
+      </div>
     </div>
 
-    <div class="row" ng-controller="ctrl as ct">
+    <div class="row">
         <div class="col s10 offset-s1">
-            
-            <div class="col s8 offset-s2">
-                <table class="centered responsive-table">
-                    <thead>
-                        <th>
-                            PLANS <i class="fas fa-arrow-right"></i><br>
-                            FEATURES <i class="fas fa-arrow-down"></i><br>
-                        </th>
-                        <th class="red-text"><span class="ui button mini">Small</span>{{total1}}</th>
-                        <th class="green-text"><span class="ui button mini">Medium</span>{{total2}}</th>
-                        <th class="orange-text"><span class="ui button mini">Large</span>{{total3}}</th>
-                        <th class="blue-text"><span class="ui button mini">XLarge</span>{{total4}}</th>
-                        <th class="pink-text"><span class="ui button mini">XXlarge</span>{{total5}}</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td style="border-right: 1px solid #eee;">Trial license</td>
-                            <td><label><input ng-click="totalFunc1(1000,$event)" id="tl1" type="checkbox" class="filled-in"  /><span></span></label></td>
-                            <td><label><input ng-click="totalFunc2(1000,$event)" id="tl2" type="checkbox" class="filled-in" /><span></span></label></td>
-                            <td><label><input ng-click="totalFunc3(1000,$event)" id="tl3" type="checkbox" class="filled-in"  /><span></span></label></td>
-                            <td><label><input ng-click="totalFunc4(1000,$event)" id="tl4" type="checkbox" class="filled-in"  /><span></span></label></td>
-                            <td><label><input ng-click="totalFunc5(1000,$event)" id="tl5" type="checkbox" class="filled-in"  /><span></span></label></td>
-                            
-                        </tr>
-                        <tr>
-                            <td style="border-right: 1px solid #eee;"><b>Installation & Administration </b></td>
-                            <td><label><input ng-click="totalFunc1(2000,$event)"  id="ia1" type="checkbox" class="filled-in"  /><span></span></label></td>
-                            <td><label><input ng-click="totalFunc2(2000,$event)" id="ia2" type="checkbox" class="filled-in" /><span></span></label></td>
-                            <td><label><input ng-click="totalFunc3(2000,$event)" id="ia3" type="checkbox" class="filled-in"  /><span></span></label></td>
-                            <td><label><input ng-click="totalFunc4(2000,$event)" id="ia4" type="checkbox" class="filled-in"  /><span></span></label></td>
-                            <td><label><input ng-click="totalFunc5(2000,$event)" id="ia5" type="checkbox" class="filled-in"  /><span></span></label></td>
-                        </tr>
-                        <tr>
-                            <td style="border-right: 1px solid #eee;">Number of languages</td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>5</td>
-                            <td>7</td>
-                            <td>All</td>
-                        </tr>
-                        <tr>
-                            <td style="border-right: 1px solid #eee;">Number of currencies</td>
-                            <td>5</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>50</td>
-                            <td>100</td>
-                        </tr>
-                        <tr>
-                            <td style="border-right: 1px solid #eee;">Test-environment</td>
-                            <td><i class="fas fa-times red-text"></i></td>
-                            <td><i class="fas fa-check green-text   "></i></td>
-                            <td><i class="fas fa-check green-text   "></i></td>
-                            <td><i class="fas fa-check green-text   "></i></td>
-                            <td><i class="fas fa-check green-text   "></i></td>
-                            
-                        </tr>
-                        <tr>
-                            <td><b>Liquidity</b></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td style="border-right: 1px solid #eee;">API to External Exchange (e.g. Kraken)</td>
-                            <td><i class="fas fa-times red-text    "></i></td>
-                            <td><i class="fas fa-times red-text    "></i></td>
-                            <td><i class="fas fa-check green-text   "></i></td>
-                            <td><i class="fas fa-check green-text   "></i></td>
-                            <td><i class="fas fa-check green-text   "></i></td>
-                            
-                        </tr>
-                        <tr>
-                            <td style="border-right: 1px solid #eee;">Market Maker</td>
-                            <td><i class="fas fa-times red-text    "></i></td>
-                            <td><i class="fas fa-times red-text    "></i></td>
-                            <td><i class="fas fa-check green-text   "></i></td>
-                            <td><i class="fas fa-check green-text   "></i></td>
-                            <td><i class="fas fa-check green-text   "></i></td>
-                        </tr>
-                        <tr>
-                            <td style="border-right: 1px solid #eee;">Merchant Plugin for E-Commerce</td>
-                            <td><i class="fas fa-times red-text    "></i></td>
-                            <td><i class="fas fa-times red-text   "></i></td>
-                            <td><i class="fas fa-times red-text   "></i></td>
-                            <td><i class="fas fa-check green-text   "></i></td>
-                            <td><i class="fas fa-check green-text   "></i></td>
-                        </tr>
-                        <tr>
-                            <td style="border-right: 1px solid #eee;">Email interfacing (e.g. Mailchimp)</td>
-                            <td><i class="fas fa-times red-text   "></i></td>
-                            <td><i class="fas fa-times red-text   "></i></td>
-                            <td><i class="fas fa-check green-text   "></i></td>
-                            <td><i class="fas fa-check green-text   "></i></td>
-                            <td><i class="fas fa-check green-text   "></i></td>
-                        </tr>
-                        <tr>
-                            <td style="border-right: 1px solid #eee;">Ethereum Tokens</td>
-                            <td><i class="fas fa-times red-text   "></i></td>
-                            <td><i class="fas fa-check green-text   "></i></td>
-                            <td><i class="fas fa-check green-text   "></i></td>
-                            <td><i class="fas fa-check green-text   "></i></td>
-                            <td><i class="fas fa-check green-text   "></i></td>
-                        </tr>
-                        <tr>
-                            <td style="border-right: 1px solid #eee;">Free time budget for custom development</td>
-                            <td><i class="fas fa-times red-text    "></i></td>
-                            <td><i class="fas fa-times red-text   "></i></td>
-                            <td><i class="fas fa-check green-text    "></i></td>
-                            <td><i class="fas fa-check green-text   "></i></td>
-                            <td><i class="fas fa-check green-text   "></i></td>
-                        </tr>
-                        <tr>
-                            <td><b>Support level</b></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td style="border-right: 1px solid #eee;">Channel</td>
-                            <td></td>
-                            <td>Email</td>
-                            <td>Email,Chat</td>
-                            <td>Email,Chat,Phone</td>
-                            <td>All Type</td>
-                        </tr>
-                        <tr>
-                            <td style="border-right: 1px solid #eee;">Response time</td>
-                            <td></td>
-                            <td>24h</td>
-                            <td>12h</td>
-                            <td>6h</td>
-                            <td>1h</td>
-                        </tr>
-
-                    </tbody>
-                </table>
-            </div>
-            
+            <center>
+                <br><br>
+                <div><b>For more about pricing</b></div>
+                <h4>Contact us<h4>
+                <div class="card z-depth-5 col s6 offset-s3">
+                    <form>
+                        <div class="input-field">
+                            <input type="text" id="name"/>
+                            <label for="name">Full Name</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" id="email"/>
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" id="skyid"/>
+                            <label for="skyid">Skype Id</label>
+                        </div>
+                        <div class="input-field">
+                            <br>
+                            <input class=" col s10 offset-s1 ui button light-blue white-text" type="submit" value="Send"/>
+                        </div>
+                        <div class="col s12">
+                            <br>
+                        </div>
+                    </form>
+                </div>
+            </center>
         </div>
     </div>
+    
+    
+    
+    <footer class="page-footer row white black-text">
+            <div class="col s10 offset-s1 grey lighten-4">
+              <div class="row">
+                <div class="col s4">
+                    <center>
+                        <br><br><br>
+                    <img style="width:150px" src="https://alphapoint.com/assets/img/ap-logo-trans-black.png" alt="">
+                    </center>
+                </div>
+                <div class="col s8">
+                    <div class="col s3">
+                        <h6><b>Products</b></h6>
+                        <br>
+                        Technology
+                        Asset Digitization
+                        Exchange Solutions
+                        Exchange Remarketer
+                    </div>
+                    <div class="col s3">
+                        <h6><b> Company</b></h6>
+                        <br>
+                        About Us
+                        Leadership 
+                        Careers
+                        Contact Us
+                        News
+                    </div>
+                    <div class="col s3">
+                        <h6><b>Resources</b></h6>
+                        <br>
+                        Intro to DLT
+                        Exchange Launch Guide
+                        Industry Reports
+                        Company Updates
+                        API
+                        Brand Kit
+                        AlphaPoint Public Network
+                        Privacy Policy
+                        Terms of Use
+                        Cookie Policy
+                    </div>
+                    <div class="col s3">
+                        <h6><b>Contact</b></h6>
+                        <br>
+                        Email | sales@alphapoint.com
+                        press@alphapoint.com 
+                        jobs@alphapoint.com
+                        Phone|+1.212.256.1231
+                    </div>
+
+
+                    
+                </div>
+              </div>
+            </div>
+    </footer>
+   
+
+    
 
 
 
-
-
-
-
-
-
+    
+  
 
 
 
@@ -477,64 +401,10 @@
 
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>    
     <script type="text/javascript" src="js/navbar.js"></script>
-    <script type="text/javascript">
-    (function(){
-        var app = angular.module('app',[])
-        .controller('ctrl',function($scope){
-
-            $scope.total1 = 6000;
-            $scope.total2 = 10000;
-            $scope.total3 = 15000;
-            $scope.total4 = 25000;
-            $scope.total5 = 30000;
-
-            $scope.totalFunc1= function(amt,e){
-                if(e.target.checked)
-                    $scope.total1 = $scope.total1 + amt;
-                else
-                    $scope.total1 = $scope.total1 - amt;
-                    console.log($scope.total1);
-
-            };
-            $scope.totalFunc2= function(amt,e){
-                if(e.target.checked)
-                    $scope.total2 = $scope.total2 + amt;
-                else
-                    $scope.total2 = $scope.total2 - amt;
-                    console.log($scope.total2);
-
-            };
-            $scope.totalFunc3= function(amt,e){
-                if(e.target.checked)
-                    $scope.total3 = $scope.total3 + amt;
-                else
-                    $scope.total3 = $scope.total3 - amt;
-                    console.log($scope.total3);
-
-            };
-            $scope.totalFunc4= function(amt,e){
-                if(e.target.checked)
-                    $scope.total4 = $scope.total4 + amt;
-                else
-                    $scope.total4 = $scope.total4 - amt;
-                    console.log($scope.total4);
-
-            };
-            $scope.totalFunc5= function(amt,e){
-                if(e.target.checked)
-                    $scope.total5 = $scope.total5 + amt;
-                else
-                    $scope.total5 = $scope.total5 - amt;
-                    console.log($scope.total5);
-
-            };
-
-        });
-    })();
-    </script>
-
+    
+   
 </body>
 
 </html>

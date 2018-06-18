@@ -32,9 +32,11 @@
         }
 
         a,
-        p,.button {
+        p,
+        .button {
             font-family: buc;
         }
+
         .myfont {
             font-family: buc;
         }
@@ -87,98 +89,108 @@
         .indicator {
             height: 5px;
         }
-        .circular{
-            margin-left:20px  !important;
+
+        .circular {
+            margin-left: 20px !important;
         }
-        ul.myappmenu{
-            display:block;
-            padding:5px;
-            border-radius:0px;
+
+        ul.myappmenu {
+            display: block;
+            padding: 5px;
+            border-radius: 0px;
             overflow: hidden;
         }
-        
-        ul.myappmenu li{
-            padding:0px;
-            border-bottom:2px solid transparent;
-            transition:all .3s ease-in-out;
+
+        ul.myappmenu li {
+            padding: 0px;
+            border-bottom: 2px solid transparent;
+            transition: all .3s ease-in-out;
         }
-        
-        ul.myappmenu li:hover{
-            border-bottom:2px solid #fff;
+
+        ul.myappmenu li:hover {
+            border-bottom: 2px solid #fff;
         }
-       
-        ul.myappmenu li.active{
-            border-bottom:2px solid #fff;
+
+        ul.myappmenu li.active {
+            border-bottom: 2px solid #fff;
         }
-        
-        nav ul a{
-        }
-        nav ul a:hover{
+
+
+        nav ul a:hover {
             background: transparent;
         }
-        button.button-tab{
-            background:-webkit-linear-gradient(180deg, rgb(46, 49, 146) 0%, rgb(41, 171, 226) 100%);border-radius:20px;
+
+        button.button-tab {
+            background: -webkit-linear-gradient(180deg, rgb(46, 49, 146) 0%, rgb(41, 171, 226) 100%);
+            border-radius: 20px;
         }
-        .ref-anim{
+
+        .ref-anim {
             animation: ref-anim .5s ease-in-out 1 normal;
         }
+
         @keyframes ref-anim {
-            from{
-                transform:scale(0);
-                opacity:0;
+            from {
+                transform: scale(0);
+                opacity: 0;
             }
-            to{
-                transform:scale(1);
-                opacity:1;
+            to {
+                transform: scale(1);
+                opacity: 1;
             }
         }
-        .myscroll-bar::-webkit-scrollbar{
-            width:10px;
-            margin-right:20px;
+
+        .myscroll-bar::-webkit-scrollbar {
+            width: 10px;
+            margin-right: 20px;
         }
-        .myscroll-bar::-webkit-scrollbar-thumb{
-            background-color:#fff;
-            border-radius:10px;
+
+        .myscroll-bar::-webkit-scrollbar-thumb {
+            background-color: #fff;
+            border-radius: 10px;
 
         }
-        ul.side-nav li.active{
-            border-radius:50px;
+
+        ul.side-nav li.active {
+            border-radius: 50px;
         }
-        ul.side-nav li.active a{
-            color:#0d47a1;
-        }
-        ul.side-nav li.active a > i{
+
+        ul.side-nav li.active a {
             color: #0d47a1;
         }
-        
+
+        ul.side-nav li.active a>i {
+            color: #0d47a1;
+        }
     </style>
 </head>
 
 <body class="white">
 
-                    
-
-    
 
 
-   
+
+
+
+
 
     <!--NAVIGATION BAR-->
     <div class="navbar-fixed">
-        <nav class="nav-extended z-depth-0" style="background:-webkit-linear-gradient(180deg, rgb(46, 49, 146) 0%, rgb(41, 171, 226) 100%);"> 
+        <nav class="nav-extended z-depth-0" style="background:-webkit-linear-gradient(180deg, rgb(46, 49, 146) 0%, rgb(41, 171, 226) 100%);">
             <div class="nav-wrapper" id="mywalletnav">
-                <a href="index.html" class="brand-logo" style="padding-left:50px;"><b>BuyUCoin</b>
-                    
+                <a href="index.html" class="brand-logo" style="padding-left:50px;">
+                    <b>BuyUCoin</b>
+
                 </a>
                 <a href="#" data-activates="slide-out" class="button-collapse hide show-on-small">
                     <i class="material-icons">menu</i>
                 </a>
                 <ul class="hide-on-med-and-down myappmenu right">
-                    <li>
+                    <li class="active">
                         <a href="tech.html">Technology</a>
                     </li>
                     <li>
-                         <a href='product.html'>Products</a>
+                        <a href='product.html'>Products</a>
                     </li>
                     <li>
                         <a href="priceExp.html">Company</a>
@@ -186,8 +198,10 @@
                     <li>
                         <a href="">Resources</a>
                     </li>
-                    <li class="active">
-                        <a href="request.html" class="red-text"><b>Request Demo</b></a>
+                    <li>
+                        <a href="request.html" class="red-text">
+                            <b>Request Demo</b>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -217,19 +231,29 @@
         </li>
         <li class="no-padding">
             <ul class="collapsible collapsible-accordion">
-              <li>
-                <a class="collapsible-header">Dropdown<i class="material-icons">arrow_drop_down</i></a>
-                <div class="collapsible-body">
-                  <ul>
-                    <li><a href="#!">First</a></li>
-                    <li><a href="#!">Second</a></li>
-                    <li><a href="#!">Third</a></li>
-                    <li><a href="#!">Fourth</a></li>
-                  </ul>
-                </div>
-              </li>
+                <li>
+                    <a class="collapsible-header">Dropdown
+                        <i class="material-icons">arrow_drop_down</i>
+                    </a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li>
+                                <a href="#!">First</a>
+                            </li>
+                            <li>
+                                <a href="#!">Second</a>
+                            </li>
+                            <li>
+                                <a href="#!">Third</a>
+                            </li>
+                            <li>
+                                <a href="#!">Fourth</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
-          </li>
+        </li>
         <li>
             <a href="new_orderbook.html">
                 <i class="material-icons left">monetization_on</i>Dentacoin</a>
@@ -267,103 +291,133 @@
     <div id="anim-row" class="col s12 hide-on-small-only" style="height:15px;"></div>
 
 
-    <div class="row hide-on-small-only">
-        <div class="col s12 carousel carousel-slider center" style="background-image:url('img/skyline.jpg');background-size:cover;background-attachment: fixed;" data-indicators="true">
-        <div class="carousel-item  white-text" href="#one!">
-            <div class="container">
-                <h2 class="left-align" style="padding:10px;background:rgba(255,255,255,0.2);"><b>ALPHAPOINT UTILIZES INTEL SECURITY TECHNOLOGY TO DELIVER ENTERPRISE-READY BLOCKCHAIN PLATFORM - AlphaPoint and Intel® Announce New TrustedVM™ Blockchain Product</b></h2> 
-                <p class="left-align">- TrustedVM™ - A trusted virtual machine enabled by Intel® Software Guard Extensions (Intel® SGX) technology</p> 
-                <p class="left-align"> - Read the full story at CoinDesk</p>
-            </div> 
+    <div class="row">
+        <div class="col s12 carousel carousel-slider center" style="background-image:url('img/tech.jpg');background-size:cover;background-attachment: fixed;"
+            data-indicators="true">
+            <div class="white-text" href="#one!">
+                <div class="container">
+                    <center>
+                        <br>
+                        <br>
+                        <br>
+                        <h3>
+                            <b>ALPHAPOINT EXCHANGE SOLUTIONS</b>
+                        </h3>
+                        <h5>
+                            <b>Modular architecture designed for digital assets
+                            </b>
+                        </h5>
+                    </center>
+                </div>
+            </div>
         </div>
-        <div class="carousel-item  white-text" href="#two!">
-            <div class="container">
-                
-                <h2 class="left-align" style="padding:10px;background:rgba(255,255,255,0.2);"><b>CME ANNOUNCES ALPHAPOINT AS TECHNOLOGY PROVIDER FOR GOLD TRADING INITIATIVE - CME partners with AlphaPoint to develop Royal Mint Gold (RMG) trading platform </b></h2>
-                <p class="left-align">- RMG blockchain and trading platform in live testing with major financial institutions</p> 
-                <p class="left-align">- Read the full story at CME OpenMarkets</p>
-            </div> 
-        </div>
-        <div class="carousel-item  white-text" href="#three!">
-            <div class="container">
-    
-                <h2 class="left-align" style="padding:10px;background:rgba(255,255,255,0.2);"><b>ALPHAPOINT AWARDED BEST INFRASTRUCTURE PROVIDER BY WATERSTECHNOLOGY</b></h2> 
-                <p class="left-align">- AlphaPoint Wins 2017 Sell-Side Technology Award for Best Infrastructure Provider</p> 
-                <p class="left-align">- Read the full press release at MarketWatch </p>
-            </div> 
-        </div>
-        
-      </div>
     </div>
-    <div class="row hide-on-med-and-up show-on-small-only">
-        <div class="col s12 carousel carousel-slider center" style="background-image:url('img/skyline.jpg');background-size:cover;background-attachment: fixed;" data-indicators="true">
-        <div class="carousel-item  white-text" href="#one!">
-            <div class="container">
-                <h6 style="padding:10px;background:rgba(255,255,255,0.2);"><b>ALPHAPOINT UTILIZES INTEL SECURITY TECHNOLOGY TO DELIVER ENTERPRISE-READY BLOCKCHAIN PLATFORM - AlphaPoint and Intel® Announce New TrustedVM™ Blockchain Product</b></h4> 
-                <p class="black-text">TrustedVM™ - A trusted virtual machine enabled by Intel® Software Guard Extensions (Intel® SGX) technology</p> 
-                <p class="black-text">Read the full story at CoinDesk</p>
-            </div> 
-        </div>
-        <div class="carousel-item  white-text" href="#two!">
-            <div class="container">
-                
-                <h6  style="padding:10px;background:rgba(255,255,255,0.2);"><b>CME ANNOUNCES ALPHAPOINT AS TECHNOLOGY PROVIDER FOR GOLD TRADING INITIATIVE - CME partners with AlphaPoint to develop Royal Mint Gold (RMG) trading platform </b></h6>
-                <p class="black-text">RMG blockchain and trading platform in live testing with major financial institutions</p> 
-                <p class="black-text">Read the full story at CME OpenMarkets</p>
-            </div> 
-        </div>
-        <div class="carousel-item  white-text" href="#three!">
-            <div class="container">
-    
-                <h6 style="padding:10px;background:rgba(255,255,255,0.2);"><b>ALPHAPOINT AWARDED BEST INFRASTRUCTURE PROVIDER BY WATERSTECHNOLOGY</b></h6> 
-                <p class="black-text">- AlphaPoint Wins 2017 Sell-Side Technology Award for Best Infrastructure Provider</p> 
-                <p class="black-text">- Read the full press release at MarketWatch </p>
-            </div> 
-        </div>
-        
-      </div>
-    </div>
-    
-    
 
     <div class="row">
         <div class="col l10 offset-l1 s12">
-            <h3 class="center-align"><b>Join Us For Free Demo</b></h3>
+            <h5>
+                <b>Technology Overview</b>
+            </h5>
             <br>
-            <h6 class="center-align">Let us walk you through our software and show you how easily you can get your own implementation up and running.</h6>
-            <br><br>
-            <form class="col l10 offset-l1 card z-depth-5 s12">
-                <div class="input-field col l6 s12 ">
-                    <input type="text" name="" id="fname">
-                    <label for="fname">First Name</label>
-                </div>
-                <div class="input-field col l6 s12">
-                    <input type="text" name="" id="lname">
-                    <label for="lname">Last Name</label>
-                </div>
-                <div class="input-field col l6 s12">
-                    <input type="text" name="" id="Email">
-                    <label for="Email">Email</label>
-                </div>
-                <div class="input-field col l6 s12">
-                    <input type="text" name="" id="skypid">
-                    <label for="skypid">Skype Id (Optional)</label>
-                </div>
-                <div class="input-field col s12">
-                    <input type="text" name="" id="msg">
-                    <label for="msg">Message</label>
-                </div>
-                <div class="input-field col s12">
-                    <input class="ui button blue darken-5 col s6 offset-s3" type="submit" value="Request Demo">
-                </div>
-            </form>
+            <div class="col l6 s12">
+                AlphaPoint has developed the AlphaPoint Distributed Ledger Platform™ (ADLP), a general-­purpose blockchain platform, from
+                the ground up to streamline the deployment of distributed financial applications. The platform encompasses
+                AlphaPoint's award-winning trading infrastructure, enabling organizations digitize financial instruments,
+                rapidly create trading venues, and reduce operational overhead. ADLP provides firms and institutions a secure,
+                flexible means of engaging with digital asset issuance, confidential smart contracts and automated workflows.
+            </div>
+            <div class="col l6 s12">
+                AlphaPoint TrustedVM™, a trusted virtual machine enabled by Intel® Software Guard Extensions (Intel® SGX) technology, which
+                allows confidential smart contracts and blockchain services to run securely. Our unique approach in leveraging
+                this technology is designed to help enterprises efficiently deploy blockchain solutions with unprecedented
+                privacy and security. AlphaPoint’s platform has been deployed in production since late 2013, handling live
+                volumes across a variety of asset classes.
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="height:50px;"></div>
+
+    <div class="row">
+        <img style="width:100%" src="https://www.alphapoint.com/sample-image.png" alt="">
+    </div>
+
+    <div class="row">
+        <div class="col l10 offset-l1 s12">
+            <h5>
+                <b>Distinguishing Features </b>
+            </h5>
+            <br>
+            <div>ADLP enables customers to digitize financial instruments, rapidly create trading venues for those same instruments,
+                and manage pre-trade and post-trade workflows across a variety legacy and DLT systems. </div>
+            <br>
+            <div>The platform itself integrates with both existing financial infrastructure (such as FIX messages), as well as
+                other blockchains, enabling firms to bridge the divide between existing and emerging protocols. </div>
+            <br>
+            <div>ADLP offers a suite of ready-made, production-tested components - including tools for risk management, external
+                integrations, and order matching - that firms can leverage to rapidly test and deploy applications on the
+                platform. These components are built on high-level APIs that sit on top of a secure set of proprietary libraries
+                powering the ADLP distributed ledger. </div>
+            <br>
+            <br>
+            <br>
+            <div class="col l6 s12">
+                <h6>
+                    <b>Proven in Live Production</b>
+                </h6>
+                <li>Running in live production live since 2013</li>
+                <li>platform customers have transacted over $100 billion to date</li>
+                <li>Cryptographic auditability of all platform activity</li>
+            </div>
+            <div class="col l6 s12">
+                <h6>
+                    <b>Patent-pending Encryption Techniques
+                    </b>
+                </h6>
+                <li>Functions as a permissioned-access blockchain on secure enterprise network
+                </li>
+                <li>Rigorous, customizable permissioning logic
+                </li>
+                <li>Message-level and field-level encryption
+                </li>
+            </div>
+
+            <div class="col s12" style="height:50px;"></div>
+
+            <div class="col l6 s12">
+                <h6>
+                    <b>Optimized for Enterprise Deployment
+                    </b>
+                </h6>
+                <li>Flexible, application-specific rules for consensus
+                </li>
+                <li>Snapshotting and archiving capabilities
+                </li>
+                <li>Existing applications, platform logic, and base protocol can be leveraged to streamline development of new
+                    applications
+                </li>
+            </div>
+            <div class="col l6 s12">
+                <h6>
+                    <b>Interoperable with Traditional & DLT-based Infrastructure
+                    </b>
+                </h6>
+                <li>Integration gateway for existing financial protocols
+                </li>
+                <li>Embeddable FIX messages
+                </li>
+                <li>Interfaces with other blockchain protocols
+                </li>
+            </div>
         </div>
     </div>
 
 
 
-    
-    
+
+
+
+
     <footer class="page-footer row white black-text">
             <div class="col l10 offset-l1 s12 grey lighten-4">
               <div class="row">
@@ -421,14 +475,14 @@
               </div>
             </div>
     </footer>
-   
-
-    
 
 
 
-    
-  
+
+
+
+
+
 
 
 
@@ -440,22 +494,24 @@
 
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <script type="text/javascript" src="js/navbar.js"></script>
     <script>
-        $(document).ready(function(){
+        $(document).ready(function () {
 
-        $('.carousel.carousel-slider').carousel({fullWidth: true});
+            $('.carousel.carousel-slider').carousel({
+                fullWidth: true
+            });
 
-        setInterval(()=>{
-            $('.carousel').carousel('next');
-        },5000);
+            setInterval(() => {
+                $('.carousel').carousel('next');
+            }, 5000);
 
-        $('.dropdown-trigger').dropdown();
-        
-});
+            $('.dropdown-trigger').dropdown();
+
+        });
     </script>
-   
+
 </body>
 
 </html>
