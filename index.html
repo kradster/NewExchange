@@ -15,7 +15,12 @@
     <style type="text/css">
         html,
         body {
-            height: 100%;
+            background-color: #21D4FD !important;
+            background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%) !important;
+
+        }
+        *{
+            font-family:sans-serif !important;
         }
 
         h1,
@@ -55,102 +60,63 @@
         }
 
 
-        .fullScreen {
-            width: 100%;
-            height: 100%;
-            display: block;
-            z-index: 999;
-            background-color: rgba(0, 0, 0, .5);
-            position: fixed;
-            display: flex;
-            justify-content: center;
+
+        .newgrd{
+            background-color: #21D4FD !important;
+            background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%) !important;
+
+        }
+        .navbar-fixed,
+        .nav-extended,
+        .nav-wrapper{
+            background:transparent !important;
+        }
+        .header-btn{
+            background-color:transparent !important;
+            box-shadow:0px 0px 1px 1px #fff !important;
+            border-radius:50px !important;
+            color: #fff !important;
+
+        }
+        .header-btn:hover{
+            background-color:white !important;
+            color: #B721FF !important;
         }
 
-        .Mycircle {
-            width: 250px;
-            height: 250px;
-            background-color: white;
-            align-self: center;
-            border-radius: 100%;
-            overflow: hidden;
-            line-height: 300px;
-            text-align: center;
-            display: flex;
-            justify-content: center;
+        .header-btn + .header-btn {
+            margin-top:20px;
+            margin-left:40px !important;
         }
-
-        .cld {
-            position: absolute;
-            align-self: center;
-        }
-
-        .indicator {
-            height: 5px;
-        }
-        .circular{
-            margin-left:20px  !important;
-        }
-        ul.myappmenu{
-            display:block;
-            padding:5px;
-            border-radius:0px;
-            overflow: hidden;
-        }
-        
-        ul.myappmenu li{
-            padding:0px;
-            border-bottom:2px solid transparent;
-            transition:all .3s ease-in-out;
-        }
-        
-        ul.myappmenu li:hover{
-            border-bottom:2px solid #fff;
-        }
-       
-        ul.myappmenu li.active{
-            border-bottom:2px solid #fff;
-        }
-        
-        nav ul a{
-        }
-        nav ul a:hover{
-            background: transparent;
-        }
-        button.button-tab{
-            background:-webkit-linear-gradient(180deg, rgb(46, 49, 146) 0%, rgb(41, 171, 226) 100%);border-radius:20px;
-        }
-        .ref-anim{
-            animation: ref-anim .5s ease-in-out 1 normal;
-        }
-        @keyframes ref-anim {
+        @keyframes ClickDown{
             from{
-                transform:scale(0);
-                opacity:0;
+                transform: translateY(0px);
             }
+            
             to{
-                transform:scale(1);
-                opacity:1;
+                transform: translateY(60px) scale(0.1);
+                
             }
         }
-        .myscroll-bar::-webkit-scrollbar{
-            width:10px;
-            margin-right:20px;
+        .ClickDownAnim{
+            margin-top:20px;
+            width:40px;
+            height:80px;
+            box-shadow:0px 0px 1px 1px #fff;
+            border-radius:50px;
+            padding:5px;
         }
-        .myscroll-bar::-webkit-scrollbar-thumb{
+        .myarrow{
+            animation:ClickDown 1s ease-in infinite normal;
+            position: relative;
+            display:block;
+            width:10px;
+            height:10px;
             background-color:#fff;
             border-radius:10px;
+        }
 
-        }
-        ul.side-nav li.active{
-            border-radius:50px;
-        }
-        ul.side-nav li.active a{
-            color:#0d47a1;
-        }
-        ul.side-nav li.active a > i{
-            color: #0d47a1;
-        }
         
+
     </style>
 </head>
 
@@ -165,9 +131,9 @@
 
     <!--NAVIGATION BAR-->
     <div class="navbar-fixed">
-        <nav class="nav-extended z-depth-0" style="background:-webkit-linear-gradient(180deg, rgb(46, 49, 146) 0%, rgb(41, 171, 226) 100%);"> 
+        <nav class="nav-extended z-depth-0"> 
             <div class="nav-wrapper" id="mywalletnav">
-                <a href="index.html" class="brand-logo" style="padding-left:50px;"><b>BuyUCoin</b>
+                <a href="#section1" class="brand-logo" style="padding-left:50px;"><b>BuyUCoin</b>
                     
                 </a>
                 <a href="#" data-activates="slide-out" class="button-collapse hide show-on-small">
@@ -175,24 +141,22 @@
                 </a>
                 <ul class="hide-on-med-and-down myappmenu right">
                     <li class="active">
-                        <a href="tech.html">Technology</a>
+                        <a href="#section2">Home</a>
                     </li>
                     <li>
-                         <a href='product.html'>Products</a>
+                         <a href='#section3'>About Us</a>
                     </li>
                     <li>
-                        <a href="priceExp.html">Company</a>
+                        <a href="#section4">Contact Us</a>
                     </li>
                     <li>
-                        <a href="">Resources</a>
+                        <a href="#section5">Services</a>
                     </li>
-                    <li>
-                        <a href="request.html" class="red-text"><b>Request Demo</b></a>
-                    </li>
+                    
                 </ul>
             </div>
         </nav>
-    </div>
+        </div>
     <!--SIDEBAR-->
 
     <ul id="slide-out" class="sidenav" style="width:250px;border-radius:0px;padding:0px;">
@@ -264,196 +228,114 @@
     </ul>
 
     <!--SIDEBAR-END-->
-    <div id="anim-row" class="col s12 hide-on-small-only" style="height:15px;"></div>
 
-
-    <div class="row hide-on-small-only">
-        <div class="col s12 carousel carousel-slider center" style="background-image:url('img/skyline.jpg');background-size:cover;background-attachment: fixed;" data-indicators="true">
-        <div class="carousel-item  white-text" href="#one!">
-            <div class="container">
-                <h2 class="left-align" style="font-size:2em;padding:10px;background:rgba(255,255,255,0.2);"><b>start your own business at low cost</b></h2> 
-                <p class="left-align">Setup your white label crypto exchange right away. Or create your own cryptocurrency using <b>bloq</b> world-renowned software. Since 2012, we have been providing exchanges with optimal software solutions on a global scale. Numerous established all cryptocurrency and commodity exchanges trust and use our software to run their business.</p> 
-            </div> 
-        </div>
-        <div class="carousel-item  white-text" href="#two!">
-            <div class="container">
-                
-                <h2 class="left-align" style="font-size:2em;padding:10px;background:rgba(255,255,255,0.2);"><b>BLOQ PROVIDING High-performance exchange technology. Built for blockchain.</b></h2>
-                <p class="left-align">Start your CRYPTOCURRENCY Exchange with our Software.</p> 
-            </div> 
-        </div>
-        <div class="carousel-item  white-text" href="#three!">
-            <div class="container">
-    
-                <h2 class="left-align" style="font-size:2em;padding:10px;background:rgba(255,255,255,0.2);"><b>BLOQ Exchange Software</b></h2> 
-                <p class="left-align"><b>BLOQ</b> provides a secure, flexible and fully customizable white-label exchange software for businesses that want to create their own exchange for any digital cryptocurrency. Our exchange software provides a holistic solution and is the only thing you need to launch a successful cryptocurrency exchange.</p> 
-            </div> 
-        </div>
-        
-      </div>
-    </div>
-    <div class="row hide-on-med-and-up show-on-small-only">
-        <div class="col s12 carousel carousel-slider center" style="background-image:url('img/skyline.jpg');background-size:cover;background-attachment: fixed;" data-indicators="true">
-            <div class="carousel-item  white-text" href="#one!">
-                <div class="container">
-                    <h5 class="left-align" style="padding:10px;background:rgba(255,255,255,0.2);"><b>start your own business at low cost</b></h5> 
-                    <p class="left-align">Setup your white label crypto exchange right away. Or create your own cryptocurrency using bloq world-renowned software. Since 2012, we have been providing exchanges with optimal software solutions on a global scale. Numerous established all cryptocurrency and commodity exchanges trust and use our software to run their business.</p> 
-                </div> 
-            </div>
-            <div class="carousel-item  white-text" href="#two!">
-                <div class="container">
-                    
-                    <h5 class="left-align" style="padding:10px;background:rgba(255,255,255,0.2);"><b>BLOQ PROVIDING High-performance exchange technology. Built for blockchain.</b></h5>
-                    <p class="left-align">Start your CRYPTOCURRENCY Exchange with our Software.</p> 
-                </div> 
-            </div>
-            <div class="carousel-item  white-text" href="#three!">
-                <div class="container">
-        
-                    <h5 class="left-align" style="padding:10px;background:rgba(255,255,255,0.2);"><b>BLOQ Exchange Software</b></h5> 
-                    <p class="left-align"><b>BLOQ</b> provides a secure, flexible and fully customizable white-label exchange software for businesses that want to create their own exchange for any digital cryptocurrency. Our exchange software provides a holistic solution and is the only thing you need to launch a successful cryptocurrency exchange.</p> 
-                </div> 
-            </div>
-        
-      </div>
-    </div>
-    
-    <div class="row container">
+     <!-- SECTION 1 START -->
+    <div id="section1" class="row hide-on-small-only">
         <center>
+            <div class="col s8 offset-s2">>
             <div class="col s12">
-                    Contact us to learn more today: <a href="request.html" class="ui button blue darken-5">Request Demo</a>
-            </div>
-        </center>
-    </div>
-
-
-
-    <div class="row center-align container" style="margin-top:50px;">
-        <h3><b>BLOQ</b> Exchange Software</h3>
-        <p style="padding:20px;"><b>BLOQ</b> provides a secure, flexible and fully customizable white-label exchange software for businesses that want to create their own exchange for any digital cryptocurrency. Our exchange software provides a holistic solution and is the only thing you need to launch a successful cryptocurrency exchange.</p>
-    </div>
-
-    <div class="row hide">
-        <div class="col l10 offset-l1 s12">
-            <div class="col l6 s12">
-                <h4>draglet Exchange Software</h4>
-                <p>draglet provides a secure, flexible and fully customizable white-label exchange software for businesses that want to create their own exchange for bitcoin or any digital cryptocurrency. Our exchange software provides a holistic solution and is the only thing you need to launch a successful cryptocurrency exchange.</p>
-                <br>
-                <button style="border-radius:50px;" class="ui button blue darken-5 white-text">View Demo</button>
-                <button style="border-radius:50px;" class="ui button grey darken-5 white-text">Explore Pricing</button>
-            </div>
-            <div class="col l6 s12">
-                <br>
-                    <iframe class="col s12" width="560" height="315" src="https://www.youtube.com/embed/IrnAorhmC7k" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
-
-    <div class="row grey lighten-4">
-        <br>
-        <h4 class="center-align">What are the Special Features of <b>BLOQ</b> Exchange Software?</h4>
-        <br>
-        <div class="col l10 offset-l1 s12 white">
-            <br>
-            <h5 class="center-align">Liquidity Options</h5>
-            <br>
-            <div class="col l6 s12">
-                <div class="col l10 offset-l1 s12">
-                <img class="col s12" src="https://www.draglet.com/wp-content/uploads/2018/05/Market-Maker.png" alt="">
-                <div class="col s12" style="height:30px;"></div>
-                <h6  class="center-align boldy"><b>Market Maker</b></h6>
-                <br>
-                <p>He steps in with predefined orders when there is no liquidity on the market to add to the orderbook. This means that if a trader wants to place a Market Buy Order and there is no one who wants to sell at the price, the Market Maker steps in as a counterparty with a spread premium.</p>
-            </div>
-            </div>
-            <div class="col l6 s12">
-                    <div class="col l10 offset-l1 s12">
-                    <img class="col s12" src="https://www.draglet.com/wp-content/uploads/2018/05/API-to-External-Exchange.png" alt="">
-                    <div class="col s12" style="height:30px;"></div>                    
-                    <h6 class="center-align boldy"><b>API to External Exchange</b></h6>
-                    <br>
-                    <p>The exchange operator creates a business account at the chosen external exchange and liquidity is based on the amount deposited in the external account. API connection with an external provider (e.g. Kraken, Bitstamp, itBit, BitMarket) is the second way to draw liquidity. In this case external orders are drawn to the local order book</p>
-            </div>
-            </div>
-        </div>
-        <div class="col l10 offset-l1 s12 white" style="margin-top:40px;">
-            <br><br>
-            <div class="col l6 s12">
-                <div class="col l10 offset-l1 s12">
-                <img class="col s12" src="https://www.draglet.com/wp-content/uploads/2018/05/Integrated-Wallet.png" alt="">
-                <div class="col s12" style="height:30px;"></div>
-                <h6  class="center-align boldy"><b>Integrated Wallet</b></h6>
-                
-            </div>
-            </div>
-            <div class="col l6 s12">
-                    <div class="col l10 offset-l1 s12"> 
-                    <p>Our exchange software includes multi-currency wallets that allow you to easily store and transact in different cryptocurrencies. Multisignature cold storage can secure all cryptocurrency funds on exchanges, allowing you to keep your crypto funds locked up and prevent any external access.</p>                 
-            </div>
-            </div>
-        </div>
-        <div class="col l10 offset-l1 s12 white" style="margin-top:40px;">
-            <br><br>
-            <div class="col l6 s12">
-                    <div class="col l10 offset-l1 s12"> 
-                    <p>The trade engine of our software instantly and automatically matches orders between buyers and sellers for the best price available. In addition, we feature different types of orders such as market and limit orders.</p>
-            </div>
-            </div>
-            <div class="col l6 s12">
-                <div class="col l10 offset-l1 s12">
-                <img class="col s12" src="https://www.draglet.com/wp-content/uploads/2018/05/Order-Matching.png" alt="">
-                <div class="col s12" style="height:30px;"></div>
-                <h6  class="center-align boldy"><b>Order Matching</b></h6><br>
-                
-            </div>
-            </div>
-        </div>
-        <div class="col l10 offset-l1 s12 white" style="margin-top:40px;">
-            <br>
-            <br>
-            <div class="col l6 s12">
-                <div class="col l10 offset-l1 s12">
-                <img class="col s12" src="https://www.draglet.com/wp-content/uploads/2018/05/Funds-Management.png" alt="">
-                <div class="col s12" style="height:30px;"></div>
-                <h6  class="center-align boldy"><b>Funds Management</b></h6>
-                
-            </div>
-            </div>
-            <div class="col l6 s12">
-                    <div class="col l10 offset-l1 s12"> 
-                    <p>Our integrated wallet software automatically manages all cryptocurrency funds transactions. Exchange owners can manually control fiat funds transfers (Euro, Dollar, etc) or automate the process by implementing payment processing features and banking interfacing.</p>
-            </div>
-            </div>
-        </div>
-        <div class="col s12" style="height:30px;"></div>        
-        <h4 class="center-align">Additional Features</h4>
-        <br>
-        <div class="col l10 offset-l1 s12 white">
-                <br>
-                <br>
-                <div class="col l6 s12 offset-l3">
-                    <div class="col l10 offset-l1 s12">
-                    <img class="col s12" src="https://www.draglet.com/wp-content/uploads/2018/05/Any-Currency.png" alt="">
-                    <div class="col s12" style="height:30px;"></div>
-                    <h6  class="center-align boldy"><b>Any Currency</b></h6>
-                    <br>
-                    <p>You can implement any currency into draglet’s exchange software. From alternative cryptocurrencies such as litecoin or ethereum to fiat currencies such as Chinese RMB, or even your personal cryptocurrency, anything can be embedded into your exchange.</p>
+                <br><br><br>
+                    <div style="font-size:3rem" class="white-text"><b>Lorem ipsum dolor sit amet.</b></div>
                 </div>
+                <div class="col s12">
+                    <br>
+                    <div style="font-size:2rem" class="white-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed</div>   
                 </div>
-                <div class="col l6 s12 hide">
-                        <div class="col l10 offset-l1 s12">
-                        <img class="col s12" src="https://www.draglet.com/wp-content/uploads/2018/05/Any-Language.png" alt="">
-                        <div class="col s12" style="height:30px;"></div>                    
-                        <h6 class="center-align boldy"><b>Any Language</b></h6>
+                <div class="col s12">
+                    <div class="white-text">
                         <br>
-                        <p>draglet’s exchange software supports any language, even right-to-left writing systems such as Arabic, Hebrew or Persian. You can, of course, implement multiple languages together as well.</p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur aperiam iste quas et eligendi, libero molestias minus praesentium omnis hic! Quidem illum reiciendis ullam tempore sint, officia repudiandae minus sequi.
+                    </div>
+                </div>
+                <div class="col s12">
+                    <br>
+                    <a href="" class="ui button large header-btn">About Us</a>
+                    <a href="" class="ui button large header-btn">Contact us</a>
+                    <a href="" class="ui button large header-btn">Demo</a>
+                </div>
+                <div class="col s12">
+                    <br>
+                    <div class="ClickDownAnim">
+                        <div class="myarrow"></div>
+                    </div>
+                    
                 </div>
                 </div>
-        </div>
-        <div class="col s12" style="height:50px;"></div>    
-        <br>
-        <br>
+        </center>
+    </div> 
+
+    
+    <!-- SECTION 1 END -->
+
+
+
+
+
+    <!-- SECTION  2 START -->
+
+    <div id="section2" class="row">
+       
+       
     </div>
+    
+        
+
+    <!-- SECTION  2 END -->
+
+
+
+
+
+
+
+
+
+
+    <!-- SECTION  3 START -->
+
+    <div id="section3" class="row">
+      
+            </div>
+    
+    
+
+    
+                    
+    <!-- SECTION 3 END -->
+        
+        
+    
+
+
+
+
+    <!-- SECTION 4 START -->
+
+    <div id="section4" class="row">
+      
+            </div>
+                
+   
+
+    <!-- SECTION 4 END -->
+
+
+
+
+
+
+    
+
+
+
+    <!-- SECTION 5 START -->
+    
+
+    <div id="section5" class="row hide-on-small-only">
+       
+    </div>
+    
+    <!-- SECTION 5 END -->
     
     <footer class="page-footer row white black-text">
         <div class="col l10 offset-l1 s12 grey lighten-4">
