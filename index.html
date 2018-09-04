@@ -15,12 +15,13 @@
     <style type="text/css">
         html,
         body {
-            background-color: #21D4FD !important;
-            background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%) !important;
+            /* background-color: #21D4FD !important; */
+            /* background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%) !important; */
 
         }
-        *{
-            font-family:sans-serif !important;
+
+        * {
+            font-family: sans-serif !important;
         }
 
         h1,
@@ -37,9 +38,11 @@
         }
 
         a,
-        p,.button {
+        p,
+        .button {
             font-family: buc;
         }
+
         .myfont {
             font-family: buc;
         }
@@ -61,80 +64,178 @@
 
 
 
-        .newgrd{
+        .newgrd {
             background-color: #21D4FD !important;
             background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%) !important;
 
         }
+
         .navbar-fixed,
         .nav-extended,
-        .nav-wrapper{
-            background:transparent !important;
+        .nav-wrapper {
+            background: transparent !important;
         }
-        .header-btn{
-            background-color:transparent !important;
-            box-shadow:0px 0px 1px 1px #fff !important;
-            border-radius:50px !important;
+
+        .header-btn {
+            background-color: transparent !important;
+            box-shadow: 0px 0px 1px 1px #fff !important;
+            border-radius: 50px !important;
             color: #fff !important;
 
         }
-        .header-btn:hover{
-            background-color:white !important;
+
+        .header-btn:hover {
+            background-color: white !important;
             color: #B721FF !important;
         }
 
-        .header-btn + .header-btn {
-            margin-top:20px;
-            margin-left:40px !important;
+        .header-btn+.header-btn {
+            margin-top: 20px;
+            margin-left: 40px !important;
         }
-        @keyframes ClickDown{
-            from{
+
+        @keyframes ClickDown {
+            from {
                 transform: translateY(0px);
             }
-            
-            to{
+
+            to {
                 transform: translateY(60px) scale(0.1);
-                
+
             }
         }
-        .ClickDownAnim{
-            margin-top:20px;
-            width:40px;
-            height:80px;
-            box-shadow:0px 0px 1px 1px #fff;
-            border-radius:50px;
-            padding:5px;
+
+        .ClickDownAnim {
+            margin-top: 20px;
+            width: 40px;
+            height: 80px;
+            box-shadow: 0px 0px 1px 1px #fff;
+            border-radius: 50px;
+            padding: 5px;
         }
-        .myarrow{
-            animation:ClickDown 1s ease-in infinite normal;
+
+        .myarrow {
+            animation: ClickDown 1s ease-in infinite normal;
             position: relative;
-            display:block;
-            width:10px;
-            height:10px;
-            background-color:#fff;
-            border-radius:10px;
+            display: block;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 10px;
         }
 
-        
+        .section-bar {
+            position: fixed;
+            display: block;
+            /* background-color:rgba(255, 255, 255, 0.4); */
+            width: 30px;
+            height: 400px;
+            transform: translateY(10%);
+            transform-origin: top;
+            left: 10px;
+            border-radius: 50px;
+            /* box-shadow:0px 0px 0px 1px #fff; */
+        }
 
+        .section-bar ul {
+            display: block;
+            margin: 0px;
+            padding: 0px;
+            margin-top: 40px;
+        }
+
+        .section-bar ul li {
+            display: block;
+            background-color: rgba(255, 255, 255, 0.5);
+            width: 10px;
+            height: 10px;
+            margin: auto;
+            margin-top: 55px;
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .section-bar ul li:first-child {
+            margin-top: 0px;
+        }
+
+        .section-bar ul li::before {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 55px;
+            background-color: rgba(255, 255, 255, 0.5);
+            position: relative;
+            left: 5px;
+            top: 10px;
+            bottom: 5px;
+            transition: all .1s linear;
+        }
+
+        .section-bar ul li:last-child::before {
+            display: none
+        }
+
+        /* .section-bar ul li:first-child::after{
+            content:"";
+            display:block;
+            width:3px;
+            height:5px;
+            background-color:#fff;
+            position: relative;
+            left:4px;
+            top:-55px;
+            bottom:5px;
+            border-radius:10px;
+            transition:all .5s ease-in-out;
+        } */
+        .progressli {
+            margin: 0px;
+            width: 3px;
+            height: 50px;
+            background-color: #fff;
+            position: absolute;
+            left: 14px;
+            border-radius: 10px;
+            transition: all .5s ease-in-out;
+            top: 40px;
+        }
+
+        .active-side-bar-link {
+            background-color: #fff !important;
+        }
+
+        .no-padd {
+            padding: 0px !important;
+        }
+
+        .processnum {
+            background-color: mediumaquamarine;
+            display: block;
+            width: 50px;
+            height: 50px;
+            padding: 15px;
+            color: #fff;
+            border-radius: 100px;
+        }
     </style>
 </head>
 
 <body class="white">
 
-                    
-
-    
 
 
-   
+
+
+
+
 
     <!--NAVIGATION BAR-->
     <div class="navbar-fixed">
-        <nav class="nav-extended z-depth-0"> 
+        <nav class="nav-extended z-depth-0">
             <div class="nav-wrapper" id="mywalletnav">
                 <a href="#section1" class="brand-logo" style="padding-left:50px;"><b>BuyUCoin</b>
-                    
+
                 </a>
                 <a href="#" data-activates="slide-out" class="button-collapse hide show-on-small">
                     <i class="material-icons">menu</i>
@@ -144,7 +245,7 @@
                         <a href="#section2">Home</a>
                     </li>
                     <li>
-                         <a href='#section3'>About Us</a>
+                        <a href='#section3'>About Us</a>
                     </li>
                     <li>
                         <a href="#section4">Contact Us</a>
@@ -152,11 +253,11 @@
                     <li>
                         <a href="#section5">Services</a>
                     </li>
-                    
+
                 </ul>
             </div>
         </nav>
-        </div>
+    </div>
     <!--SIDEBAR-->
 
     <ul id="slide-out" class="sidenav" style="width:250px;border-radius:0px;padding:0px;">
@@ -181,19 +282,19 @@
         </li>
         <li class="no-padding">
             <ul class="collapsible collapsible-accordion">
-              <li>
-                <a class="collapsible-header">Dropdown<i class="material-icons">arrow_drop_down</i></a>
-                <div class="collapsible-body">
-                  <ul>
-                    <li><a href="#!">First</a></li>
-                    <li><a href="#!">Second</a></li>
-                    <li><a href="#!">Third</a></li>
-                    <li><a href="#!">Fourth</a></li>
-                  </ul>
-                </div>
-              </li>
+                <li>
+                    <a class="collapsible-header">Dropdown<i class="material-icons">arrow_drop_down</i></a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="#!">First</a></li>
+                            <li><a href="#!">Second</a></li>
+                            <li><a href="#!">Third</a></li>
+                            <li><a href="#!">Fourth</a></li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
-          </li>
+        </li>
         <li>
             <a href="new_orderbook.html">
                 <i class="material-icons left">monetization_on</i>Dentacoin</a>
@@ -229,22 +330,36 @@
 
     <!--SIDEBAR-END-->
 
-     <!-- SECTION 1 START -->
-    <div id="section1" class="row hide-on-small-only">
+
+    <div class="section-bar newgrd">
+        <div class="progressli"></div>
+        <ul>
+            <li class="active-side-bar-link"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <!-- SECTION 1 START -->
+    <div id="section1" class="row newgrd" style="margin-top:-65px;">
         <center>
-            <div class="col s8 offset-s2">>
-            <div class="col s12">
-                <br><br><br>
+            <div class="col s8 offset-s2">
+                <div class="col s12">
+                    <br><br><br><br><br><br>
                     <div style="font-size:3rem" class="white-text"><b>Lorem ipsum dolor sit amet.</b></div>
                 </div>
                 <div class="col s12">
                     <br>
-                    <div style="font-size:2rem" class="white-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed</div>   
+                    <div style="font-size:2rem" class="white-text">Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Sed</div>
                 </div>
                 <div class="col s12">
                     <div class="white-text">
                         <br>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur aperiam iste quas et eligendi, libero molestias minus praesentium omnis hic! Quidem illum reiciendis ullam tempore sint, officia repudiandae minus sequi.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur aperiam iste quas et
+                        eligendi, libero molestias minus praesentium omnis hic! Quidem illum reiciendis ullam tempore
+                        sint, officia repudiandae minus sequi.
                     </div>
                 </div>
                 <div class="col s12">
@@ -258,13 +373,14 @@
                     <div class="ClickDownAnim">
                         <div class="myarrow"></div>
                     </div>
-                    
-                </div>
-                </div>
-        </center>
-    </div> 
 
-    
+                </div>
+                <div class="col s12"><br><br><br><br><br></div>
+            </div>
+        </center>
+    </div>
+
+
     <!-- SECTION 1 END -->
 
 
@@ -273,12 +389,81 @@
 
     <!-- SECTION  2 START -->
 
-    <div id="section2" class="row">
-       
-       
+    <div id="section2" class="row white">
+        <div class="col s12" style="height:1000px;">
+            <center>
+                <br>
+                <div href="" class="ui button large">ABOUT US</div>
+                <br><br>
+                <h5 class="grey-text text-darken-4" style="font-size:2rem;"><b>What we are ?</b></h5>
+                <br><br>
+                <div class="col s6 offset-s3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat omnis
+                    assumenda earum placeat impedit beatae nisi dolorem neque distinctio fugiat autem maiores suscipit
+                    minima at voluptatum, labore officiis ipsa perferendis?</div>
+            </center>
+            <div class="col s8 offset-s2">
+                <div class="col s12" style="height:100px"></div>
+                <div class="col s4" style="font-size:2rem;">
+                    <b>Reasons</b> <span style="font-weight:100;">why <br> we might be the <br> right fit for you</span>
+                </div>
+                <div class="col s8" style="font-size:0.7rem;font-weight:bold;">
+                    <center>
+                        <div class="col s4"><strong>LATEST TECHNOLOGY</strong></div>
+                        <div class="col s4"><strong>VAST EXPERIENCE</strong></div>
+                        <div class="col s4"><strong>SOLID DEVELOPMENT</strong></div>
+                    </center>
+                </div>
+            </div>
+            <div class="col s12">
+                <center>
+                    <br>
+                    <br><br><br><br><br>
+                    <h5 class="grey-text text-darken-4" style="font-size:2rem;"><b>The Process</b></h5>
+                    <div class="col s6 offset-s3">it seem like marathone, but we sprint through it</div>
+                    <div class="col s12"><br><br></div>
+                    <div class="col s8 offset-s2 card z-depth-5" style="border-radius:10px;">
+                        <br><br>
+                        <div class="col s3 no-padd">
+                            <br>
+                            <div class="processnum blue">1</div>
+                            <br>
+                            Lorem ipsum dolor sit amet.
+                            <div class="col s12"><br><br></div>
+                        </div>
+                        <div class="col s3 no-padd">
+                            <br>
+                            <div class="processnum amber">2</div>
+                            <br>
+                            Lorem ipsum dolor sit amet.
+                            <div class="col s12"><br><br></div>
+
+                        </div>
+                        <div class="col s3 no-padd">
+                            <br>
+                            <div class="processnum light-blue accent-2">3</div>
+                            <br>
+                            Lorem ipsum dolor sit amet.
+                            <div class="col s12"><br><br></div>
+
+
+                        </div>
+                        <div class="col s3 no-padd">
+                            <br>
+                            <div class="processnum green accent-3">4</div>
+                            <br>
+                            Lorem ipsum dolor sit amet.
+                            <div class="col s12"><br><br></div>
+
+                        </div>
+                    </div>
+                </center>
+            </div>
+
+        </div>
+
     </div>
-    
-        
+
+
 
     <!-- SECTION  2 END -->
 
@@ -294,17 +479,18 @@
     <!-- SECTION  3 START -->
 
     <div id="section3" class="row">
-      
-            </div>
-    
-    
+        <div class="col s12" style="height:1500px;"></div>
 
-    
-                    
+    </div>
+
+
+
+
+
     <!-- SECTION 3 END -->
-        
-        
-    
+
+
+
 
 
 
@@ -312,10 +498,12 @@
     <!-- SECTION 4 START -->
 
     <div id="section4" class="row">
-      
-            </div>
-                
-   
+        <div class="col s12" style="height:1500px;"></div>
+
+
+    </div>
+
+
 
     <!-- SECTION 4 END -->
 
@@ -324,84 +512,101 @@
 
 
 
-    
+
 
 
 
     <!-- SECTION 5 START -->
-    
+
 
     <div id="section5" class="row hide-on-small-only">
-       
+        <div class="col s12" style="height:1500px;"></div>
+
+
     </div>
-    
+
     <!-- SECTION 5 END -->
-    
+
     <footer class="page-footer row white black-text">
         <div class="col l10 offset-l1 s12 grey lighten-4">
-          <div class="row">
-            <div class="col l4 s12">
-                <center>
-                    <br><br><br>
-                <img style="width:150px" src="https://alphapoint.com/assets/img/ap-logo-trans-black.png" alt="">
-                </center>
-            </div>
-            <div class="col l8 s12">
-                <div class="col l3 s12">
-                    <br class="show-on-small-only hide-on-med-and-up">
-                    <h6><b>Products</b></h6>
-                    <br class="show-on-med-and-up hide-on-small-only">
-                    <a href="tech.html" class="active">Technology</a><br>
-                    <a href="priceExp.html">Asset Digitization</a><br>
-                    <a href="product.html">Exchange Solutions</a><br>
-                    <a href="index.html">Exchange Remarketer</a><br><br>
+            <div class="row">
+                <div class="col l4 s12">
+                    <center>
+                        <br><br><br>
+                        <img style="width:150px" src="https://alphapoint.com/assets/img/ap-logo-trans-black.png" alt="">
+                    </center>
                 </div>
-                <div class="col l3 s12">
-                    <h6><b>Company</b></h6>
-                    <br class="show-on-med-and-up hide-on-small-only">
-                    <a>About Us</a><br>
-                    <a>Leadership</a><br> 
-                    <a>Careers</a><br>
-                    <a>Contact Us</a><br>
-                    <a>News</a><br><br>
-                </div>
-                <div class="col l3 s12">
-                    <h6><b>Resources</b></h6>
-                    <br class="show-on-med-and-up hide-on-small-only">
-                    <a>Intro to DLT</a> <br>
-                    <a>Exchange Launch Guide</a> <br>
-                    <a>Industry Reports</a> <br>
-                    <a>Company Updates</a> <br>
-                    <a>API</a><br>
-                    <a>Brand Kit</a> <br>
-                    <a>AlphaPoint Public Network</a> <br>
-                    <a>Privacy Policy</a> <br>
-                    <a>Terms of Use</a><br>
-                    <a>Cookie Policy</a><br> <br>
-                </div>
-                <div class="col l3 s12">
-                    <h6><b>Contact</b></h6>
-                    <br class="show-on-med-and-up hide-on-small-only">
-                    <a>Email | sales@alphapoint.com</a><br>
-                    <a>press@alphapoint.com </a><br>
-                    <a>jobs@alphapoint.com</a><br>
-                    <a>Phone|+1.212.256.1231</a><br><br>
-                </div>
+                <div class="col l8 s12">
+                    <div class="col l3 s12">
+                        <br class="show-on-small-only hide-on-med-and-up">
+                        <h6><b>Products</b></h6>
+                        <br class="show-on-med-and-up hide-on-small-only">
+                        <a href="tech.html" class="active">Technology</a><br>
+                        <a href="priceExp.html">Asset Digitization</a><br>
+                        <a href="product.html">Exchange Solutions</a><br>
+                        <a href="index.html">Exchange Remarketer</a><br><br>
+                    </div>
+                    <div class="col l3 s12">
+                        <h6><b>Company</b></h6>
+                        <br class="show-on-med-and-up hide-on-small-only">
+                        <a>About Us</a><br>
+                        <a>Leadership</a><br>
+                        <a>Careers</a><br>
+                        <a>Contact Us</a><br>
+                        <a>News</a><br><br>
+                    </div>
+                    <div class="col l3 s12">
+                        <h6><b>Resources</b></h6>
+                        <br class="show-on-med-and-up hide-on-small-only">
+                        <a>Intro to DLT</a> <br>
+                        <a>Exchange Launch Guide</a> <br>
+                        <a>Industry Reports</a> <br>
+                        <a>Company Updates</a> <br>
+                        <a>API</a><br>
+                        <a>Brand Kit</a> <br>
+                        <a>AlphaPoint Public Network</a> <br>
+                        <a>Privacy Policy</a> <br>
+                        <a>Terms of Use</a><br>
+                        <a>Cookie Policy</a><br> <br>
+                    </div>
+                    <div class="col l3 s12">
+                        <h6><b>Contact</b></h6>
+                        <br class="show-on-med-and-up hide-on-small-only">
+                        <a>Email | sales@alphapoint.com</a><br>
+                        <a>press@alphapoint.com </a><br>
+                        <a>jobs@alphapoint.com</a><br>
+                        <a>Phone|+1.212.256.1231</a><br><br>
+                    </div>
 
 
-                
+
+                </div>
             </div>
-          </div>
         </div>
-</footer>
-   
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+        <!-- <script type="text/javascript" src="js/navbar.js"></script> -->
+        <script>
+            $(document).ready(function () {
 
-    
+                $(window).on('scroll', function () {
+                    myFunction()
+                });
+
+            });
+
+            function myFunction() {
+                var winScroll = $(document).scrollTop()
+                var height = $(document).height() - $(window).height();
+                var scrolled = (winScroll / height) * 100;
+                console.log(scrolled);
+                $(".progressli").css('height', scrolled + "%");
+            }
+        </script>
+    </footer>
 
 
 
-    
-  
 
 
 
@@ -412,23 +617,12 @@
 
 
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>    
-    <script type="text/javascript" src="js/navbar.js"></script>
-    <script>
-        $(document).ready(function(){
 
-        $('.carousel.carousel-slider').carousel({fullWidth: true});
 
-        setInterval(()=>{
-            $('.carousel').carousel('next');
-        },5000);
 
-        $('.dropdown-trigger').dropdown();
-        
-});
-    </script>
-   
+
+
+
 </body>
 
 </html>
